@@ -35,14 +35,7 @@ public class Task04 {
             return false;
         }
 
-        int tx = x2 > x1 ? x2 : x1;
-        x1 = x1 + x2 - tx;
-        x2 = tx;
-        int ty = y2 > y1 ? y2 : y1;
-        y1 = y1 + y2 - ty;
-        y2 = ty;
+        return  !(x1 == x2 && y1 == y2) && Math.abs(x1-x2) <= 1 && Math.abs(y1-y2) <= 1;
 
-        return ((x2 - x1) + (y2 - y1) <= 2)
-                && ((x2 - x1 == 1) || (y2 - y1 == 1));
     }
 }
